@@ -1,0 +1,109 @@
+body {
+    font-family: "Poppins", "serif";
+    background-image: url(../images/concrete_seamless.png);
+    background-color: #f1f1f1;
+}
+header {
+    display: flex;
+    flex-direction: column;
+}
+.nav_links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card>header {    /* header elements that are children of card class*/
+    background-color: #288088;
+    border-color: #45ADAD;
+    border-style: solid;
+    border-width: 2px;
+    padding: 20px 0px 20px 0px;
+    border-radius: 50px 50px 0px 0px;
+}
+.card {
+    flex-basis: 450px;
+}
+.pricing {
+    justify-content: center;
+    align-items: center;
+}
+.gallery img {
+    border-style: solid;
+    border-color: #50C7C7;
+    border-width: 10px;
+    margin: 10px;
+    width: 300px;
+}
+.gallery {  /* need to fix justify so that the photos look right */
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+    height: 100%;
+}
+
+@media screen and (min-width: 900px) {
+header {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+.nav_links {
+    flex-direction: row;
+    margin-right: 0px;
+    margin-left: auto;
+    margin-top: 20px;
+}
+.pricing, .card { /* #12 why are the cards taking up the full width and not staying at 275px */
+    display: flex;
+    flex: 275px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+}
+
+@media print {
+body {
+    background-image: none;
+    background-color: #f1f1f1 !important;
+    font-family: "Arial", "Helvetica";
+}
+.nav_links {
+    display: flex;
+    flex-direction: row;
+    align-items: space-between;
+    justify-content: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.gallery, #gallery {
+    display: none;
+}
+.pricing, .card { /* #12 why are the cards taking up the full width and not staying at 275px */
+    display: flex;
+    flex: 200px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.card {    /* header elements that are children of card class*/
+    flex-basis: 200px;
+    border-color: #45ADDD;
+    border-style: solid;
+    border-width: 2px;
+    padding: 0px 0px 20px 0px;
+    border-radius: 50px 50px 0px 0px;
+}
+.card>header {
+    border-color: none;
+    background-color: #288088 !important;
+    width: 100%;
+    height: 100%;
+}
+footer {
+    background-color: black !important;
+}
+}
+
